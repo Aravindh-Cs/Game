@@ -355,7 +355,7 @@ header nav
 }
 .logo p:nth-child(2)
 {
-    font-size: 1.1em;
+    font-size: 1em;
 }  
 .head 
 {
@@ -444,16 +444,15 @@ header nav
 }
 .card 
 {
-    background-color: aqua;
     height: 200px;
 }
 .card img 
 {
-    width: 100px;
+    width: 90px;
 }
 .link a
 {
-    font-size: 1em;
+    font-size: .7em;
 }
 #contact 
 {
@@ -485,6 +484,6 @@ header nav
 }
 .info a p
 {
-    font-size:10px;
+    font-size:17px;
 }
 }
