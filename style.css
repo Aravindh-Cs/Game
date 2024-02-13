@@ -1,0 +1,490 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+header
+{
+    width: 100%;
+    border-bottom: 3px solid black;
+    background-color:rgb(173, 250, 247);
+    color: rgb(113, 117, 120);
+}
+header nav
+{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav 
+{
+    width: 75%;
+    height: 100%;
+}
+.nav ul 
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.nav ul a 
+{
+    font-size: 1.4em;
+    color: black;
+    font-weight: 600;
+}
+.logo
+{
+    width: 20%;
+}
+.logo p:nth-child(1)
+{
+    font-size: 2em;
+}
+.logo p:nth-child(2)
+{
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+.logo p:nth-child(2) span
+{
+    color: rgb(243, 13, 13);
+}
+.logo p:nth-child(1) span 
+{
+    background-color: rgb(117, 123, 121);
+    color: rgb(241, 235, 235);
+    border: 3px double black;
+}
+.head 
+{
+    background-color: burlywood;
+    background-color: rgb(164, 215, 235);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid black;
+    color: rgb(165, 7, 7);
+}
+.head p 
+{
+    text-align:justify;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.head .left 
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.6rem;
+}
+.head .right 
+{
+    width: 40%;
+}
+.head .right img
+{
+    height: 100%;
+    width: 100%;
+}
+.head h1 
+{
+    color: gray;
+}
+#about 
+{
+    background-color: rgb(183, 242, 201);
+    background-color: rgb(176, 176, 234);
+    height: auto;
+    width: 100%;
+    font-size: 1.5em;
+    border-bottom: 3px solid black;
+    padding: 20px;
+}
+.about
+{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .left
+{
+    width: 70%;
+}
+#about h1 
+{
+    color: rgb(66, 64, 67);
+}
+.about .right
+{
+    width: 30%;
+}
+.about .left p 
+{
+    line-height: 1.7;
+    letter-spacing: 1px;
+    color: rgb(66, 58, 56);
+}
+.img-slider 
+{
+    width: 100%;
+    display: flex;
+    border-bottom: 3px solid black;
+    background-color: rgb(240, 225, 197);
+}
+.img-slider .left 
+{
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-slider .right
+{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.img-slider .right p
+{
+    font-size: 2em;
+    text-align: center;
+    color: rgb(227, 4, 4);
+    color: rgb(85, 72, 72);
+    font-style: oblique;
+    padding-right: 10px;
+}
+.screen 
+{
+    height: 400px;
+    width: 450px;
+    position: relative;
+}
+.slider-items,
+.hidden 
+{
+    display: none;
+    background-color: rgb(0, 0, 0);
+}
+.slider 
+{
+    position: relative;
+}
+.slider-items img 
+{
+    height: 75%;
+    width: 95%;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.active 
+{
+    display: block;
+    animation: fade 3s;
+}
+@keyframes fade
+{
+    0%{opacity: 0.5;}
+    100%{opacity: 1;
+        transition: opacity linear;}
+}
+.leftarr,.rightarr
+{
+    height: 20px;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.rightarr
+{
+    transform: rotate(180deg);
+}
+.arrow 
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
+    left: 3%;
+    top: 40%;
+    z-index: 5;
+    visibility: hidden;
+}
+.slider:hover .arrow
+{
+    visibility: visible ;
+}
+#game 
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(143, 249, 143);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border-bottom: 3px solid black;
+}
+#game h1
+{
+    margin-top: 10px;
+    color: brown;
+}
+.board 
+{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(2,300px);  
+    gap: 40px; 
+    margin-bottom: 10px;
+}
+.card 
+{
+    background-color: rgb(117, 234, 234);
+    padding: 10px;
+    height: 270px;
+    display: grid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+.card img 
+{
+    height: 100px;
+    width: 180px;
+    object-fit: contain;
+}
+.link
+{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+.link a 
+{
+    font-size: 1.3em;
+    color: black;
+}
+#contact
+{
+    background-color: rgb(193, 201, 201);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+#contact h1 
+{
+    margin-top: 10px;
+    color: rgb(15, 64, 48);
+}
+#contact .contact-para
+{
+    font-size: 1.6em;
+    padding: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+.contact
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.info 
+{
+    width: 40%;
+    padding-left: 30px;
+}
+.info a
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(47, 43, 50);
+    gap: 5px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+.info a:hover 
+{
+    color: rgb(171, 29, 29);
+}
+.info a p
+{
+    color: rgb(62, 66, 66);
+    padding: 10px;
+}
+@media(max-width:800px)
+{
+.logo p:nth-child(1)
+{
+    font-size: 1.3em;
+}
+.logo p:nth-child(2)
+{
+    font-size: 1.1em;
+}  
+.head 
+{
+    height: auto;
+}
+.head .left 
+{
+    margin-top: 20px;
+    width: 65%;
+    font-size: 1.1em;
+    justify-content: space-around;
+}
+.head .left h1 
+{
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.head .right
+{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+.head .right img 
+{
+    height: 220px;
+    width: 120px;
+    object-fit: fill;
+}
+.nav ul 
+{
+    padding-left: 20px;
+}    
+.nav ul a 
+{
+    font-size: 1em;
+}
+.about
+{
+    flex-direction: column;
+    position: relative;
+}
+.about .left
+{
+    width: 100%;
+}    
+#about
+{
+    font-size: 1.1em;
+    padding: 10px;
+}
+.about .right
+{
+    display: none;
+}
+.slider-items img 
+{
+        height: 75%;
+        width: 187px;
+}   
+.screen 
+{
+    height: 150px;
+    width: 200px;
+}
+.img-slider .left 
+{
+    width: 60%;
+    height: 300px;
+}
+.img-slider .right p 
+{
+    font-size: 1em;
+    padding: 0;
+}
+.leftarr,.rightarr
+{
+    height: 20px;
+}
+.board
+{
+    grid-template-columns: repeat(2,100px);
+    grid-template-rows: repeat(2,220px);
+    gap: 10px; 
+    margin-bottom: 0;
+}
+.card 
+{
+    background-color: aqua;
+    height: 200px;
+}
+.card img 
+{
+    width: 100px;
+}
+.link a
+{
+    font-size: 1em;
+}
+#contact 
+{
+    height: auto;
+}
+#contact .contact-para
+{
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding-left: 0;
+    padding: 15px;
+}
+.contact
+{
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.info 
+{
+    width: 100%;
+    padding-left: 20px;
+}
+.info a
+{
+    font-size: 1.2em;
+    gap: 10px;
+    font-style: oblique;
+}
+.info a p
+{
+    font-size: 1.2em;
+}
+}
